@@ -1,0 +1,5 @@
+import requests
+
+url = "https://docs.oracle.com/cd/F40923_01/books/OnDemDataLoad/c-Sample-Log-File-ajw1023877.html"
+response = requests.get(url)
+print({response.status_code})
