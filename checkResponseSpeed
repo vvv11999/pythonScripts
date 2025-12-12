@@ -1,0 +1,9 @@
+import requests, time
+
+url = "https://example.com"
+start = time.perf_counter()
+r = requests.get(url, timeout=5)
+elapsed = (time.perf_counter() - start) * 1000
+print(f"{url} -> {elapsed:.1f} ms")
+if elapsed > 200:
+    print("Slow response!!!")
